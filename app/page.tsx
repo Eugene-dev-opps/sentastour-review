@@ -20,7 +20,7 @@ export default function Home() {
     const { name, value } = e.target;
     setNewReview({ ...newReview, [name]: value });
   };
-
+  const references = [`planet's`,`it's`]
   const handleSubmitReview = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setReviews([...reviews, newReview]);
@@ -63,16 +63,17 @@ export default function Home() {
        <main className="container mx-auto my-8">
        <div className="tourism-section">
           <h2 className='h2'>Sentastours Tourism</h2>
+          {/*@ts-ignore*/}
           <p>Nature and wildlife tours offer an immersive experience that transcends mere sightseeing, 
             allowing travelers to connect deeply with the natural world. 
-            These tours unveil the wonders of our planet's diverse ecosystems,
+            These tours unveil the wonders of our {references[0]} diverse ecosystems,
              from lush rainforests to vast savannas and pristine marine environments. 
              Immerse yourself in the vibrant colors of exotic flora, witness majestic wildlife in their natural habitats,
               and feel the rhythm of nature as you explore. 
-              Whether it's encountering endangered species, marveling at breathtaking landscapes, or learning about local conservation efforts,
+              Whether {references[1]} encountering endangered species, marveling at breathtaking landscapes, or learning about local conservation efforts,
                nature and wildlife tours offer a profound sense of awe and appreciation for the beauty and complexity of life on Earth. 
                Each experience is a journey of discovery,
-             fostering a deep respect for our planet's biodiversity and inspiring a desire to protect and preserve these natural treasures for future generations.</p>
+             fostering a deep respect for our {references[0]} biodiversity and inspiring a desire to protect and preserve these natural treasures for future generations.</p>
         </div>
         <div className="review-section">
           <h2>Share your experience with us below! Your review matters to us and helps others see and engage with our services.</h2>
