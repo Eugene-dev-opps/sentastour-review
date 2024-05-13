@@ -1,0 +1,226 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b6fbe8; /* Light gray background */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header styles */
+  header {
+    background-image: url('./wild.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Text color */
+    padding: 20px;
+  }
+  
+  .logo {
+    /* Example styles */
+    margin-right: 20px; /* Adjust as needed */
+  }
+  
+  .logo img {
+    /* Example styles */
+    width: 100%;
+    height: auto;
+    max-width: 100px; /* Adjust as needed */
+  }
+  
+
+  header h1 {
+    font-size: 2.5rem; /* Large font size for the heading */
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  nav a:hover {
+    color: #f1f1f1; /* Lighter color on hover */
+  }
+  
+  /* Main Content styles */
+  main {
+    padding: 20px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+  }
+  
+  .review-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .review-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .review-card p {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  /* Form styles */
+  form {
+    margin-top: 20px;
+  }
+  
+  form input,
+  form textarea,
+  form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background-color: #3498db; /* Blue button background color */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  form button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  /* styles.css */
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+.tourism-section {
+  width: calc(50% - 10px); /* Half of the page minus some margin */
+  background-image: url('./wild.jpg'); /* Specify the path to your background image */
+  background-size: cover; /* Cover the entire div with the background image */
+  background-position: center; /* Center the background image */
+  padding: 50px; /* Add padding to the content inside the div */
+  position: relative;
+}
+
+/* Create a pseudo-element for the blend effect */
+.tourism-section::before {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute; /* Position relative to the .tourism-section */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 1; /* Ensure the overlay is above the text */
+}
+
+/* Additional styles for the content */
+.h2,
+p {
+  color: #fff; /* Example color for the text */
+  position: relative; /* Ensure the text is above the overlay */
+  z-index: 2; /* Ensure the text is above the overlay */
+}
+
+.tourism-section .h2 {
+  font-size: 40px; /* Adjust font size as needed */
+  font-style: italic;
+  font-weight: bold; /* Add boldness for emphasis */
+  font-family: 'Times New Roman', serif;
+}
+
+.review-section {
+  width: calc(50% - 10px); /* Half of the page minus some margin */
+  margin-top: 100px; /* Move it down */
+}
+
+.head2 {
+  /* Set font family to Lato, sans-serif */
+  font-family: 'Times New Roman', serif;
+  /* Set font size to 24px */
+  font-size: 24px;
+  /* Set font weight to bold */
+  font-weight: bold;
+  /* Add additional styles such as color, text decoration, etc. */
+  color: #000000; /* Dark gray color */
+  /* Add other styles as needed */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px; /* Maximum width for larger screens */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+/* Styles for smaller screens (e.g., tablets) */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%; /* Adjust container width for smaller screens */
+    padding: 10px; /* Adjust padding as needed */
+  }
+
+  /* Adjust font size for smaller screens */
+  .h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+    overflow-wrap: break-word; /* Break long words */
+  }
+}
+
+/* Styles for even smaller screens (e.g., mobile phones) */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%; /* Full width for smaller screens */
+    padding: 5px; /* Adjust padding as needed */
+  }
+
+  /* Adjust font size for smaller screens */
+  .h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
